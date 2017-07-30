@@ -1,0 +1,9 @@
+<section>
+  <todo-header [placeholder]="placeholder" (placeholderOnFocus)="togglePlaceholder()"
+               (placeholderOnBlur)="togglePlaceholder()" (onEnterUp)="addTodo($event)"></todo-header>
+  <todo-list [todos]="todos" [checkAll]="checkAll" (checkAllEvent)="toggleAll($event)"
+             (toggleTodoTopEvt)="toggleTodo($event)" (removeTodoTopEvent)="removeTodo($event)">
+  </todo-list>
+  <todo-footer [itemCount]="todos?.length"></todo-footer>
+</section>
+
