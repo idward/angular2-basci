@@ -4,6 +4,6 @@
   <todo-list [todos]="todos" [checkAll]="checkAll" (checkAllEvent)="toggleAll($event)"
              (toggleTodoTopEvt)="toggleTodo($event)" (removeTodoTopEvent)="removeTodo($event)">
   </todo-list>
-  <todo-footer [itemCount]="todos?.length"></todo-footer>
+  <todo-footer [itemCount]="todos?.length" (clearCompletedEvt)="clearAllCompleted()"></todo-footer>
 </section>
 

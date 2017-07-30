@@ -4,12 +4,12 @@ import {LoginComponent} from "./login/login.component";
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'todo',
+    redirectTo: 'todo/ALL',
     pathMatch: 'full'
   },
   {
     path: 'todo',
-    redirectTo: 'todo'
+    redirectTo: 'todo/ALL'
   },
   {
     path: 'login',

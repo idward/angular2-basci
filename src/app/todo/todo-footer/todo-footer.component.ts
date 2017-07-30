@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
   selector: 'todo-footer',
@@ -7,10 +7,15 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TodoFooterComponent implements OnInit {
   @Input() itemCount:number;
+  @Output() clearCompletedEvt:EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  clearAllCompleted(){
+    this.clearCompletedEvt.emit(true);
   }
 
 }
